@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- displays site properly based on user's device -->
+
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+	<title>Frontend Mentor | 3-column preview card component</title>
+
+	<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+	<style>
+		body{
+			background-color: hsl(0, 0%, 95%);
+		}
+		.attribution {
+			font-size: 11px;
+			text-align: center;
+		}
+
+		.attribution a {
+			color: hsl(228, 45%, 44%);
+		}
+
+		.cards_section {
+			display: grid;
+			grid-auto-flow: column;
+			grid-template-columns: 270px 270px 270px;
+			justify-content: center;
+			margin: 100px 0px;
+			color: white;
+		}
+
+		.cards_section .card {
+			padding: 40px;
+		}
+
+		#card1 button:hover {
+			color: hsl(31, 77%, 52%);
+		}
+
+		#card2 button:hover {
+			color: hsl(184, 100%, 22%);
+		}
+
+		#card3 button:hover {
+			color: hsl(179, 100%, 13%);
+		}
+
+		.cards_section #card1 {
+			line-height: 30px;
+			background-color: hsl(31, 77%, 52%);
+			border-radius: 10px 0px 0px 10px;
+		}
+
+		.cards_section #card2 {
+			line-height: 30px;
+			background-color: hsl(184, 100%, 22%);
+		}
+
+		.cards_section #card3 {
+			line-height: 30px;
+			background-color: hsl(179, 100%, 13%);
+			border-radius: 0px 10px 10px 0px;
+		}
+
+		.cards_section button {
+			width: 130px;
+			height: 40px;
+			border: 4px solid hsl(0, 0%, 95%);
+			border-radius: 50px;
+			background-color: transparent;
+			color: hsl(0, 0%, 95%);
+			margin-top: 50px;
+		}
+
+		.cards_section button:hover {
+			background-color: hsl(0, 0%, 95%);
+		}
+
+		.card h1 {
+			color: hsl(0, 0%, 95%);
+			font-family: Lexend Deca;
+		}
+
+		.card p {
+			color: hsla(0, 0%, 100%, 0.75);
+			font-size: 15px
+		}
+
+		/* 850px and 645px view point for more responsive */
+		@media (max-width:850px){
+			.cards_section {
+				grid-auto-flow: column;
+				grid-template-columns: auto auto auto;
+			}
+		}
+		@media (max-width:645px){
+			.cards_section {
+				grid-auto-flow: row;
+				grid-template-columns: auto;
+			}
+		}
+
+		@media (max-width:375px) {
+			.cards_section {
+				grid-auto-flow: row;
+				grid-template-columns: auto;
+			}
+
+			.cards_section #card1 {
+				border-radius: 10px 10px 0px 0px;
+			}
+
+			.cards_section #card3 {
+				border-radius: 0px 0px 10px 10px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="cards_section">
+		<div class="card" id="card1">
+			<img src="./images/icon-sedans.svg" alt="icon-sedans" />
+			<h1>
+				Sedans
+			</h1>
+			<p>
+				Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city
+				or on your next road trip.
+			</p>
+			<button>Learn More</button>
+		</div>
+		<div class="card" id="card2">
+			<img src="./images/icon-suvs.svg" alt="icon-suvs" />
+			<h1>
+				SUVs
+			</h1>
+			<p>
+				Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation
+				and off-road adventures.
+			</p>
+			<button>Learn More</button>
+		</div>
+		<div class="card" id="card3">
+			<img src="./images/icon-luxury.svg" alt="icon-luxury" />
+			<h1>
+				Luxury
+			</h1>
+			<p>
+				Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury
+				rental and arrive in style.
+			</p>
+			<button>Learn More</button>
+		</div>
+	</div>
+
+	<div class="attribution">
+		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+		Coded by <a href="#">Shivesh Gupta</a>.
+	</div>
+</body>
+
+</html>
